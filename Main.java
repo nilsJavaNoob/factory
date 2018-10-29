@@ -23,3 +23,7 @@
 	}	
 	
  }//class
+ //git remote add origin https://github.com/nilsJavaNoob/factory.git
+//git push -u origin master
+//git remote add kup
+//git remote add origin https://github.com/nilsJavaNoob/pav.git

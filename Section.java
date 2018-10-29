@@ -1,6 +1,6 @@
-public class Grsh {
+public class Section {
 	
-	private int grshNmb;
+	private int sectionNmb;
 	private Section[] sections;
 	private Avtomat[] avtomates;
 	
