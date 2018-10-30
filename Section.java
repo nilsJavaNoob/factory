@@ -1,28 +1,29 @@
 public class Section {
 	
 	private int sectionNmb;
-	private Section[] sections;
-	private Avtomat[] avtomates;
+	private Panel[] panels;
 	
-	public Grsh(int grshNmb){
+	public Section(String sectNmb){
 			
-		this.grshNmb = grshNmb;
-		avtomates = new Avtomat[getCountAvt()];
+		this.sectionNmb = sectionNmb;
 		
-		for(int i=0; i< avtomates.length;i++){
-			avtomates[i] = new Avtomat();
-	}
+		panels = new Panel[getCountPanel()/*stub*/];
+		
+		for(int i=0; i< panels.length;i++){
+			panels[i] = new Panel();
+	    }
 	}
 	
 	public String toString(){
-		String result = "This GRSH # " + grshNmb + "\n";
-		for(Avtomat avt: avtomates){
-			result+=avt.toString();
+		String result = "Section # " + sectionNmb + "\n";
+		
+		for(Panel panel: panels){
+			result+=panel.toString();
 		}
 		return result;
 	}	
 	
-	public int getCountAvt(){
-		return 5;
+	public int getCountPanel(){
+		return 5; //
 	}
 }

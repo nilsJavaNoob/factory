@@ -2,27 +2,30 @@ public class Grsh {
 	
 	private int grshNmb;
 	private Section[] sections;
-	private Avtomat[] avtomates;
+	//private Avtomat[] avtomates;
 	
 	public Grsh(int grshNmb){
 			
 		this.grshNmb = grshNmb;
-		avtomates = new Avtomat[getCountAvt()];
+		sections = new Section[getCountSections()];
 		
-		for(int i=0; i< avtomates.length;i++){
-			avtomates[i] = new Avtomat();
-	}
+		for(int i=0; i< sections.length; i++){
+			sections[i] = new Section("1");
+	    }
 	}
 	
+	 int getCountSections(){
+	 return 2;
+	 }
+		 
+		 
+		 
+		 
 	public String toString(){
 		String result = "This GRSH # " + grshNmb + "\n";
-		for(Avtomat avt: avtomates){
-			result+=avt.toString();
+		for(Section sect: sections){
+			result+=sect.toString();
 		}
 		return result;
-	}	
-	
-	public int getCountAvt(){
-		return 5;
-	}
+	}		
 }
